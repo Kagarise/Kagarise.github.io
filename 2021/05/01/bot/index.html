@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>基于go-cqhttp和NoneBot的QQ机器人 | Kagarise</title><meta name="keywords" content="bot"><meta name="author" content="Kagarise"><meta name="copyright" content="Kagarise"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="基于go-cqhttp和NoneBot的QQ机器人的帮助页面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于go-cqhttp和NoneBot的QQ机器人">
+<meta property="og:url" content="http://kagarise.cn/2021/05/01/bot/index.html">
+<meta property="og:site_name" content="Kagarise">
+<meta property="og:description" content="基于go-cqhttp和NoneBot的QQ机器人的帮助页面">
+<meta property="og:locale">
+<meta property="og:image" content="https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/top/0501/top.jpg">
+<meta property="article:published_time" content="2021-04-30T18:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-16T09:47:41.795Z">
+<meta property="article:author" content="Kagarise">
+<meta property="article:tag" content="bot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/top/0501/top.jpg"><link rel="shortcut icon" href="https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/favicon.ico"><link rel="canonical" href="http://kagarise.cn/2021/05/01/bot/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '基于go-cqhttp和NoneBot的QQ机器人',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-05-16 17:47:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/avatar.png" onerror="onerror=null;src='https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">44</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/top/0501/top.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Kagarise</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">基于go-cqhttp和NoneBot的QQ机器人</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-04-30T18:00:00.000Z" title="Created 2021-05-01 02:00:00">2021-05-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-05-16T09:47:41.795Z" title="Updated 2021-05-16 17:47:41">2021-05-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/game/">game</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>项目github地址：<a target="_blank" rel="noopener" href="https://github.com/Kagarise/qqbot">https://github.com/Kagarise/qqbot</a></p>
+<h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><ul>
+<li>获取机器人帮助页💛（本页面）</li>
+<li>command：help/帮助</li>
+</ul>
+<h2 id="闲聊"><a href="#闲聊" class="headerlink" title="闲聊"></a>闲聊</h2><ul>
+<li>使用tuling（<a target="_blank" rel="noopener" href="http://www.turingapi.com/">http://www.turingapi.com/</a>）聊天接口🌼</li>
+<li>command：无</li>
+</ul>
+<h2 id="语录"><a href="#语录" class="headerlink" title="语录"></a>语录</h2><ul>
+<li>包含但不限于土味情话、舔狗日记、奇葩对话、网易云热评的语录，可使用如下命令查看所有语录🍺</li>
+<li>command：quotation/语录</li>
+</ul>
+<h2 id="戳一戳"><a href="#戳一戳" class="headerlink" title="戳一戳"></a>戳一戳</h2><ul>
+<li>对Ray戳一戳会给予随机的反馈🌸</li>
+<li>command：无</li>
+</ul>
+<h2 id="动物图片"><a href="#动物图片" class="headerlink" title="动物图片"></a>动物图片</h2><ul>
+<li>使用命令随机获取猫🐱、狗🐶图片</li>
+<li>command：cat/猫图/猫猫图/来张猫图/来张猫猫图/来份猫图/来份猫猫图/来一张猫图/来一张猫猫图/来一份猫图/来一份猫猫图</li>
+<li>command：dog/…</li>
+</ul>
+<h2 id="Pixiv"><a href="#Pixiv" class="headerlink" title="Pixiv"></a>Pixiv</h2><ul>
+<li><font color='red'> <strong>WARNING：</strong></font>Please use it in a safe place!⚠️</li>
+<li>获取setu</li>
+<li>command：/setu</li>
+<li>根据illust id获取图片</li>
+<li>command：pid &lt;id&gt;</li>
+<li>根据tag获取随机图片</li>
+<li>command：ps &lt;key&gt; / psearch &lt;key&gt;</li>
+<li>获取作者近期作品</li>
+<li>command：pu &lt;uid&gt; / puser &lt;uid&gt;</li>
+<li>获取当日排行榜</li>
+<li>command：pr &lt;rank&gt; / prank &lt;rank&gt;</li>
+</ul>
+<h2 id="黑白棋"><a href="#黑白棋" class="headerlink" title="黑白棋"></a>黑白棋</h2><ul>
+<li>来一场惊险刺激的黑白棋🍉（网页端），内置多种难度AI，并可以在线双人联机对战</li>
+<li>command：othello/黑白棋/来局黑白棋/来一局黑白棋</li>
+</ul>
+<h2 id="天气"><a href="#天气" class="headerlink" title="天气"></a>天气</h2><ul>
+<li>获取天气以及实时气温🍀</li>
+<li>command：天气 &lt;城市&gt;</li>
+</ul>
+<h2 id="手绘"><a href="#手绘" class="headerlink" title="手绘"></a>手绘</h2><ul>
+<li>由于服务器带宽过小，请不要上传太大的图片[推荐100kb以下🍑]或原图</li>
+<li>将图片转化为手绘风格</li>
+<li>command：手绘</li>
+</ul>
+<h2 id="语音"><a href="#语音" class="headerlink" title="语音"></a>语音</h2><ul>
+<li>发送语音🚀（建议512字以下）</li>
+<li>command：speak/语音</li>
+</ul>
+<h2 id="BiliBili直播推送"><a href="#BiliBili直播推送" class="headerlink" title="BiliBili直播推送"></a>BiliBili直播推送</h2><ul>
+<li>用户开播时推送消息🍰</li>
+<li>目前只用作推送，不接收命令查询</li>
+</ul>
+<h2 id="搜图"><a href="#搜图" class="headerlink" title="搜图"></a>搜图</h2><ul>
+<li>插件原地址：<a target="_blank" rel="noopener" href="https://github.com/synodriver/nonebot_plugin_picsearcher">https://github.com/synodriver/nonebot_plugin_picsearcher</a></li>
+<li>从各个接口查找图片来源,目前支持ascii2d exhentai iqdb saucenao trace.moe</li>
+<li>command：search/搜图</li>
+</ul>
+<h2 id="BiliBili小程序"><a href="#BiliBili小程序" class="headerlink" title="BiliBili小程序"></a>BiliBili小程序</h2><ul>
+<li>插件原地址：<a target="_blank" rel="noopener" href="https://github.com/knva/nonebot_plugin_biliav">https://github.com/knva/nonebot_plugin_biliav</a></li>
+<li>将用户发的av号或者bv号转成小程序返回</li>
+<li>command：&lt;av号&gt;/&lt;BV号&gt;</li>
+</ul>
+<h2 id="点歌"><a href="#点歌" class="headerlink" title="点歌"></a>点歌</h2><ul>
+<li>插件原地址：<a target="_blank" rel="noopener" href="https://github.com/maxesisn/nonebot_plugin_songpicker2">https://github.com/maxesisn/nonebot_plugin_songpicker2</a></li>
+<li>数据源为网易云音乐</li>
+<li>command：点歌</li>
+</ul>
+<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h2><ul>
+<li>上述一些插件的定时推送</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Kagarise</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://kagarise.cn/2021/05/01/bot/">http://kagarise.cn/2021/05/01/bot/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/bot/">bot</a></div><div class="post_share"><div class="social-share" data-image="https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/top/0501/top.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/05/03/cloudflare/"><img class="prev-cover" src="https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/top/0503/top.jpg" onerror="onerror=null;src='https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">使用CloudFlare Workers反向代理pixiv</div></div></a></div><div class="next-post pull-right"><a href="/2021/04/26/dango-react/"><img class="next-cover" src="https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/top/0426/top.jpg" onerror="onerror=null;src='https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">bilibili搜索关键字数据分析 react页面展示</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9"><span class="toc-number">1.</span> <span class="toc-text">帮助</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%B2%E8%81%8A"><span class="toc-number">2.</span> <span class="toc-text">闲聊</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E5%BD%95"><span class="toc-number">3.</span> <span class="toc-text">语录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%B3%E4%B8%80%E6%88%B3"><span class="toc-number">4.</span> <span class="toc-text">戳一戳</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E7%89%A9%E5%9B%BE%E7%89%87"><span class="toc-number">5.</span> <span class="toc-text">动物图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pixiv"><span class="toc-number">6.</span> <span class="toc-text">Pixiv</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%91%E7%99%BD%E6%A3%8B"><span class="toc-number">7.</span> <span class="toc-text">黑白棋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A9%E6%B0%94"><span class="toc-number">8.</span> <span class="toc-text">天气</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E7%BB%98"><span class="toc-number">9.</span> <span class="toc-text">手绘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E9%9F%B3"><span class="toc-number">10.</span> <span class="toc-text">语音</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BiliBili%E7%9B%B4%E6%92%AD%E6%8E%A8%E9%80%81"><span class="toc-number">11.</span> <span class="toc-text">BiliBili直播推送</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E5%9B%BE"><span class="toc-number">12.</span> <span class="toc-text">搜图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BiliBili%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="toc-number">13.</span> <span class="toc-text">BiliBili小程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%82%B9%E6%AD%8C"><span class="toc-number">14.</span> <span class="toc-text">点歌</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="toc-number">15.</span> <span class="toc-text">定时任务</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/bg.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2021 By Kagarise</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="https://kagarise-1304519045.cos.ap-nanjing.myqcloud.com/img/icp.png"><span>备案号：豫ICP备2020036386号-1</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?kagarise";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="kagarise";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='/'|| '/' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='/'|| '/' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><!-- hexo injector body_end end --></body></html>
